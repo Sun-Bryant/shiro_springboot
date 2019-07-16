@@ -36,7 +36,6 @@ public class UserController {
             subject.login(token);//会去到UserRealm的认证方法出进行认证。
             //登陆成功 跳转到主页（test.html）
             return "redirect:/testThymeleaf";
-
         } catch (UnknownAccountException e) {
 //            e.printStackTrace();
             //登录失败：用户名不存在
@@ -44,7 +43,7 @@ public class UserController {
 //            return "redirect:/toLogin";//不写redirect 相当于跳转到一个页面(model数据传不过去)，写上相当于是一个请求。
             return "login";
         } catch (IncorrectCredentialsException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
             //登录失败：密码错误
             model.addAttribute("msg", "密码错误");
             return "login";

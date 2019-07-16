@@ -45,7 +45,6 @@ public class ShiroConfig {
         //拦截所有
         filterMap.put("/*", "authc");
 
-
         //修改跳转的login页面
         shiroFilterFactoryBean.setLoginUrl("/toLogin");
         //设置未授权提示页面
